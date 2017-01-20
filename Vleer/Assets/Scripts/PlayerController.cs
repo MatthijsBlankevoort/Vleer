@@ -5,15 +5,15 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour {
 
     public float movementSpeed;
-    private Color redColor, greenColor, blueColor, yellowColor;
+    private Color32 redColor, greenColor, blueColor, yellowColor;
     private SpriteRenderer mySpriteRenderer;
 
 	// Use this for initialization
 	void Start () {
         redColor = new Color32(255,0,0,255);
         greenColor = new Color32(0,255,0,255);
-        blueColor = new Color32(0,0,255,255);
-        yellowColor = new Color32(255,255,0,255);
+        blueColor = new Color32(0,0, 210, 255);
+        yellowColor = new Color32(255,235,0,255);
         mySpriteRenderer = this.GetComponent<SpriteRenderer>();
 	}
 	
