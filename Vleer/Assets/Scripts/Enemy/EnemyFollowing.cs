@@ -6,18 +6,26 @@ public class EnemyFollowing : MonoBehaviour {
 
     public float lookRadius;
     public float speed;
-    public  GameObject player;
+    private GameObject player;
     private Collider2D[] collidersInRadius;
 
 	// Use this for initialization
 	void Start () {
-        //player = GameObject.FindGameObjectWithTag("Player");
+        player = GameObject.FindGameObjectWithTag("Player");
 	}
 
     void OnGizmoDraw ()
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(gameObject.transform.position, lookRadius);
+    }
+
+    void OnCollisionEnter (Collision col)
+    {
+        if(col.collider.gameObject == player)
+        {
+            GameControllerBase.gameController.livesManager.KillPlayer();
+        }
     }
 	
 	// Update is called once per frame

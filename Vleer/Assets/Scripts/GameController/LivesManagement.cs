@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class LivesManagement : MonoBehaviour {
 
-    public int maxLives;
+    public int maxLives = 3;
     private int curLives;
 
 	void Start () {
@@ -17,12 +17,15 @@ public class LivesManagement : MonoBehaviour {
 		
 	}
 
-    public void Died()
+    public void KillPlayer()
     {
         curLives -= 1;
         if(curLives <= 0)
         {
             GameControllerBase.gameController.sceneLoader.LoadScene("Game Over");
+        } else
+        {
+            GameControllerBase.gameController.sceneLoader.LoadScene(SceneManager.GetActiveScene().name);
         }
     }
 }
