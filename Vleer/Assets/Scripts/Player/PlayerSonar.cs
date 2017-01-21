@@ -32,7 +32,8 @@ public class PlayerSonar : MonoBehaviour {
 
         if (timeFromNextSonar <= 0)
         {
-            GameObject spawnedSonar = (GameObject)Instantiate(sonarPrefab, gameObject.transform.position, gameObject.transform.rotation);
+            GameObject spawnedSonar = (GameObject)Instantiate(sonarPrefab, gameObject.transform.localPosition, gameObject.transform.rotation);
+            spawnedSonar.transform.parent = transform;
 
             SonarEffect sonarScript = spawnedSonar.GetComponent<SonarEffect>();
             sonarScript.growthSpeed = this.growthSpeed;
