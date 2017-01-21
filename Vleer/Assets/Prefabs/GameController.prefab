@@ -19,7 +19,11 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4588025953145276}
+  - component: {fileID: 114325097197436172}
   - component: {fileID: 114011708558509642}
+  - component: {fileID: 114243621290376614}
+  - component: {fileID: 114434191734579598}
+  - component: {fileID: 114177423425516530}
   m_Layer: 0
   m_Name: GameController
   m_TagString: GameController
@@ -51,4 +55,51 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bccab73e6463b504fb2dd7755b0a150f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isPaused: 0
+  isPaused: 1
+--- !u!114 &114177423425516530
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1283348440795392}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6f15d3a04dae5f438486fafdb28fce8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114243621290376614
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1283348440795392}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d48843db8d57350409e764ed3e61ad55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxLives: 0
+--- !u!114 &114325097197436172
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1283348440795392}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1760b897c0fee7c4190348e4fd97e295, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneLoader: {fileID: 0}
+--- !u!114 &114434191734579598
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1283348440795392}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7b02ad594fdf7b4ca5535346bcc7650, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canvas: {fileID: 0}

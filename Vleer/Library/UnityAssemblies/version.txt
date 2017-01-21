@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 5.5.0f3:2.8.0.0
 StandaloneWindows
 C:/Program Files/Unity 5.5/Editor/Data/Managed/UnityEngine.dll
@@ -21,3 +22,15 @@ C:/Program Files/Unity 5.5/Editor/Data/UnityExtensions/Unity/UnityVR/Editor/Unit
 C:/Program Files/Unity 5.5/Editor/Data/Managed/UnityEditor.Graphs.dll
 C:/Program Files/Unity 5.5/Editor/Data/PlaybackEngines/windowsstandalonesupport/UnityEditor.WindowsStandalone.Extensions.dll
 C:/Program Files (x86)/Microsoft Visual Studio Tools for Unity/2015/Editor/SyntaxTree.VisualStudio.Unity.Bridge.dll
+=======
+5.5.0f3:2.8.0.0
+StandaloneWindows
+D:/Unity5/Editor/Data/Managed/UnityEngine.dll
+D:/Unity5/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll
+D:/Unity5/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll
+D:/Unity5/Editor/Data/UnityExtensions/Unity/PlaymodeTestsRunner/UnityEngine.PlaymodeTestsRunner.dll
+D:/Unity5/Editor/Data/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll
+D:/Unity5/Editor/Data/UnityExtensions/Unity/UnityHoloLens/RuntimeEditor/UnityEngine.HoloLens.dll
+D:/Unity5/Editor/Data/UnityExtensions/Unity/UnityVR/RuntimeEditor/UnityEngine.VR.dll
+D:/Unity5/Editor/Data/Managed/UnityEditor.dll
+>>>>>>> master
