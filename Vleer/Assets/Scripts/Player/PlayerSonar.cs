@@ -16,6 +16,9 @@ public class PlayerSonar : MonoBehaviour {
     public float fullCharge = 100f;
     public bool beginWithFullCharge;
 
+    public float rechargeAmount = 1f;
+    public float everyThisManySeconds = 0.5f;
+
     private float timeFromNextSonar;
     private float charge;
 
@@ -43,6 +46,9 @@ public class PlayerSonar : MonoBehaviour {
             timeFromNextSonar = secondsBetweenSonars;
         }
 
+        if (Time.time % everyThisManySeconds == 0)
+            Charge(rechargeAmount);
+
         if (Input.GetButtonDown("Fire Large Sonar") && charge >= fullCharge)
         {
             charge = 0;
@@ -50,7 +56,7 @@ public class PlayerSonar : MonoBehaviour {
         }
 	}
 
-    void FireLargeSonar()
+    public void FireLargeSonar()
     {
         GameObject spawnedSonar = (GameObject)Instantiate(bigSonarPrefab, gameObject.transform.position, gameObject.transform.rotation);
 
@@ -60,7 +66,7 @@ public class PlayerSonar : MonoBehaviour {
         sonarScript.fadeTimer = bigFadeTimer;
     }
 
-    void Charge (float amount)
+    public void Charge (float amount)
     {
         charge += amount;
     }

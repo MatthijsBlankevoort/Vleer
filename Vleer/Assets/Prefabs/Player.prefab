@@ -116,6 +116,8 @@ MonoBehaviour:
     type: 2}
   fullCharge: 100
   beginWithFullCharge: 1
+  rechargeAmount: 1
+  everyThisManySeconds: 0.5
 --- !u!114 &114934153844000460
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -129,6 +131,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   score: 0
   lives: 3
+  comboTimerStandard: 2
+  comboChargeStart: 15
+  comboMultiplier: 1.5
   enemies: []
   mySpriteRenderer: {fileID: 0}
   enemySpriteRenderer: {fileID: 0}
