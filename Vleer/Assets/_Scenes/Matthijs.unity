@@ -91,11 +91,6 @@ NavMeshSettings:
     cellSize: 0.16666667
     accuratePlacement: 0
   m_NavMeshData: {fileID: 0}
---- !u!223 &38468630 stripped
-Canvas:
-  m_PrefabParentObject: {fileID: 223461713505335654, guid: 980d4660f7f62ff4a84bf852ba78ce73,
-    type: 2}
-  m_PrefabInternal: {fileID: 64858663}
 --- !u!1001 &64858663
 Prefab:
   m_ObjectHideFlags: 0
@@ -293,7 +288,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7b02ad594fdf7b4ca5535346bcc7650, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvas: {fileID: 38468630}
 --- !u!1001 &274195614
 Prefab:
   m_ObjectHideFlags: 0
@@ -331,10 +325,6 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4304010280836632, guid: d98df59a762dc9545aa76e521f56b600, type: 2}
       propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1705637106008424, guid: d98df59a762dc9545aa76e521f56b600, type: 2}
-      propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []

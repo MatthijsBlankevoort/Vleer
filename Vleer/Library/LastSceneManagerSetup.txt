@@ -1,8 +1,4 @@
 sceneSetups:
-<<<<<<< HEAD
-- path: Assets/_Scenes/Dev/Ian.unity
-=======
-- path: Assets/_Scenes/Demo Scene - Sonar.unity
->>>>>>> master
+- path: Assets/_Scenes/Matthijs.unity
   isLoaded: 1
   isActive: 1
