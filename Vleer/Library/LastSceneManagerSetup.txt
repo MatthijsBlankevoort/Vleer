@@ -1,6 +1,6 @@
 <<<<<<< HEAD
 sceneSetups:
-- path: Assets/_Scenes/Kuno.unity
+- path: Assets/_Scenes/Demo Scene - Player Sonar.unity
   isLoaded: 1
   isActive: 1
 =======
