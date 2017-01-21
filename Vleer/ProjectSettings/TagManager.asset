@@ -4,11 +4,7 @@
 TagManager:
   serializedVersion: 2
   tags:
-<<<<<<< HEAD
-  - Main Menu GUI
-=======
   - Enemy
->>>>>>> Enemy
   layers:
   - Default
   - TransparentFX

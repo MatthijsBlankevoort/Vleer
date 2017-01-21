@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class VictoryScreen : MonoBehaviour {
     private float buttonWidth, buttonHeight, buttonPositionX, buttonPositionY ;
@@ -36,7 +37,7 @@ public class VictoryScreen : MonoBehaviour {
         if (GUI.Button(new Rect(Screen.width / 6 + buttonPositionX *2, buttonPositionY, buttonWidth, buttonHeight), "Go to the main menu!"))
         {
             //Load the main menu
-            Application.LoadLevel(0);
+            SceneManager.LoadScene(0);
         }
         //Button to main menu
     }

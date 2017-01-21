@@ -1,12 +1,1 @@
-sceneSetups:
-<<<<<<< HEAD
-<<<<<<< HEAD
-- path: Assets/_Scenes/Menus/Victory Screen.unity
-=======
-- path: Assets/_Scenes/Matthijs.unity
->>>>>>> master
-=======
-- path: Assets/_Scenes/Dev/Ian.unity
->>>>>>> Enemy
-  isLoaded: 1
-  isActive: 1
+sceneSetups: []

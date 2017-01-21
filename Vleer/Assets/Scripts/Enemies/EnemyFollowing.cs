@@ -49,4 +49,12 @@ public class EnemyFollowing : MonoBehaviour {
         }
         
 	}
+
+    void OnCollisionEnter(Collider col)
+    {
+        PlayerManagement player = col.gameObject.GetComponent<PlayerManagement>();
+
+        if (player != null)
+            player.Kill();
+    }
 }
