@@ -8,18 +8,23 @@ public class PauseScript : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-        if (Input.GetKeyDown(KeyCode.Joystick1Button7))
+        if (Input.GetKeyDown(KeyCode.Joystick1Button7) && !isPaused)
         {
-            if (Time.timeScale > 0 && !isPaused)
-            {
-                Time.timeScale = 0;
-                isPaused = true;
-            }
-            else
-            {
-                Time.timeScale = 1;
-                isPaused = false;
-            }
+            Pause();
+        }
+        else if (Input.GetKeyDown(KeyCode.Joystick1Button7) && isPaused)
+        {
+            Resume();
         }
 	}
+    public void Pause()
+    {
+            Time.timeScale = 0;
+            isPaused = true;
+    }
+    public void Resume()
+    {
+            Time.timeScale = 1;
+            isPaused = false;
+    }
 }
