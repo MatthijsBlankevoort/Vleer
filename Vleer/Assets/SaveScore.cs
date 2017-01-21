@@ -12,6 +12,10 @@ public class SaveScore : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        myScore = player.GetComponent<ScoreScript>().score;
+        if (player != null)
+        {
+            myScore = player.GetComponent<ScoreScript>().score;
+        }
+        
 	}
 }

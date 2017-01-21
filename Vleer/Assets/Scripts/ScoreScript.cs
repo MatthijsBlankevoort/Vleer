@@ -21,10 +21,15 @@ public class ScoreScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (enemies.Count <= 0)
+        if (lives <= 0)
+        {
+            Application.LoadLevel("Game Over");
+        }
+        else if (enemies.Count <= 0)
         {
             Application.LoadLevel("Victory Screen");
         }
+
 	}
 
     void OnCollisionEnter2D(Collision2D other)
