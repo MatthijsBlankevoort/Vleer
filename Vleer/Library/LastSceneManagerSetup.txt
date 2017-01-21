@@ -1,16 +1,4 @@
 sceneSetups:
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-- path: Assets/_Scenes/Menus/Victory Screen.unity
-=======
-- path: Assets/_Scenes/Matthijs.unity
->>>>>>> master
-=======
-- path: Assets/_Scenes/Dev/Ian.unity
->>>>>>> Enemy
-=======
 - path: Assets/_Scenes/Demo Scene - Sonar.unity
->>>>>>> Sonar
   isLoaded: 1
   isActive: 1
