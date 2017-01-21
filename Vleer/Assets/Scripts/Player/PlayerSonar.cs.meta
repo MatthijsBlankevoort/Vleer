@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 9e3e515c58db2b84d8b71bbd82e97e67
+timeCreated: 1485001133
+licenseType: Free
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - sonarPrefab: {fileID: 1774359743592246, guid: 0aa101c3c2bd2724e958735c97256fef,
+      type: 2}
+  - bigSonarPrefab: {fileID: 1179427400657818, guid: 27af4cbbd7400774aa7458092eb03de3,
+      type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
