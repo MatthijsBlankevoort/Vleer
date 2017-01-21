@@ -1,4 +1,8 @@
 sceneSetups:
+<<<<<<< HEAD
 - path: Assets/_Scenes/Menus/Main Menu.unity
+=======
+- path: Assets/_Scenes/Matthijs.unity
+>>>>>>> master
   isLoaded: 1
   isActive: 1
