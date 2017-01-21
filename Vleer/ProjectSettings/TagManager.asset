@@ -6,6 +6,10 @@ TagManager:
   tags:
   - Sonar
   - Enemy
+  - Wall
+  - PauseCanvas
+  - Main Menu GUI
+  - LoadText
   layers:
   - Default
   - TransparentFX

@@ -20,10 +20,10 @@ GameObject:
   m_Component:
   - component: {fileID: 4588025953145276}
   - component: {fileID: 114325097197436172}
-  - component: {fileID: 114011708558509642}
   - component: {fileID: 114243621290376614}
   - component: {fileID: 114434191734579598}
   - component: {fileID: 114177423425516530}
+  - component: {fileID: 114157861285881114}
   m_Layer: 0
   m_Name: GameController
   m_TagString: GameController
@@ -44,7 +44,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114011708558509642
+--- !u!114 &114157861285881114
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -55,7 +55,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bccab73e6463b504fb2dd7755b0a150f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isPaused: 1
+  isPaused: 0
 --- !u!114 &114177423425516530
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -102,4 +102,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7b02ad594fdf7b4ca5535346bcc7650, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvas: {fileID: 0}
