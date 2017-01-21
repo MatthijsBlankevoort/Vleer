@@ -7,6 +7,8 @@ public class GameControllerBase : MonoBehaviour {
     public static GameControllerBase gameController;
     [HideInInspector]
     public SceneLoader sceneLoader;
+    [HideInInspector]
+    public LivesManagement livesManager;
 
 	// Use this for initialization
     void Awake()
@@ -23,5 +25,6 @@ public class GameControllerBase : MonoBehaviour {
     void Start()
     {
         sceneLoader = this.gameObject.GetComponent<SceneLoader>();
+        livesManager = this.gameObject.GetComponent<LivesManagement>();
     }
 }

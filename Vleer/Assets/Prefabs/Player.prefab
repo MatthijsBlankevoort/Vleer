@@ -21,8 +21,9 @@ GameObject:
   - component: {fileID: 4304010280836632}
   - component: {fileID: 212801339060193476}
   - component: {fileID: 114853849208773380}
-  - component: {fileID: 61182469810269382}
+  - component: {fileID: 58854712350130088}
   - component: {fileID: 50708295597453548}
+  - component: {fileID: 114907106781715212}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -63,8 +64,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!61 &61182469810269382
-BoxCollider2D:
+--- !u!58 &58854712350130088
+CircleCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -76,7 +77,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Size: {x: 2.56, y: 2.56}
+  m_Radius: 1.2500001
 --- !u!114 &114853849208773380
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -88,8 +89,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d798e1a5ed219d94793e77f691cc3279, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 100
   pauseInputDelay: 10
+  movementSpeed: 100
+--- !u!114 &114907106781715212
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1705637106008424}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e3e515c58db2b84d8b71bbd82e97e67, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  growthSpeed: 1.5
+  fadeSize: 1
+  fadeTimer: 1
+  secondsBetweenSonars: 2
+  sonarPrefab: {fileID: 1774359743592246, guid: 0aa101c3c2bd2724e958735c97256fef,
+    type: 2}
+  bigGrowthSpeed: 2
+  bigFadeSize: 2
+  bigFadeTimer: 4
+  bigSonarPrefab: {fileID: 1179427400657818, guid: 27af4cbbd7400774aa7458092eb03de3,
+    type: 2}
+  fullCharge: 100
+  beginWithFullCharge: 1
 --- !u!212 &212801339060193476
 SpriteRenderer:
   m_ObjectHideFlags: 1
