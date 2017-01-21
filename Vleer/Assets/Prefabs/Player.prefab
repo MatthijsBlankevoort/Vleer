@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 58854712350130088}
   - component: {fileID: 50708295597453548}
   - component: {fileID: 114907106781715212}
+  - component: {fileID: 114934153844000460}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -89,8 +90,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d798e1a5ed219d94793e77f691cc3279, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  movementSpeed: 3
   pauseInputDelay: 10
-  movementSpeed: 100
 --- !u!114 &114907106781715212
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -115,6 +116,22 @@ MonoBehaviour:
     type: 2}
   fullCharge: 100
   beginWithFullCharge: 1
+--- !u!114 &114934153844000460
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1705637106008424}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71557fa6b3fbd6d4aac500827a47fb66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  score: 0
+  lives: 3
+  enemies: []
+  mySpriteRenderer: {fileID: 0}
+  enemySpriteRenderer: {fileID: 0}
 --- !u!212 &212801339060193476
 SpriteRenderer:
   m_ObjectHideFlags: 1
