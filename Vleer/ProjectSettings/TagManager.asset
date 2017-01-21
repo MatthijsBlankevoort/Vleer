@@ -4,11 +4,8 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Main Menu GUI
-  - Enemy
   - Sonar
-  - LoadText
-  - PauseCanvas
+  - Enemy
   layers:
   - Default
   - TransparentFX
