@@ -4,11 +4,9 @@
 TagManager:
   serializedVersion: 2
   tags:
-<<<<<<< HEAD
   - Main Menu GUI
-=======
   - Enemy
->>>>>>> Enemy
+  - Sonar
   layers:
   - Default
   - TransparentFX
