@@ -20,11 +20,11 @@ public class PlayerController : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void FixedUpdate () {
         if (pause.isPaused)
             return;
         transform.Translate(Input.GetAxisRaw("Horizontal") * movementSpeed * Time.deltaTime, Input.GetAxisRaw("Vertical") * movementSpeed * Time.deltaTime, 0);
-        if (Input.GetKey(KeyCode.Joystick1Button0))
+        if (Input.GetKeyDown(KeyCode.Joystick1Button0))
         {
             mySpriteRenderer.color = greenColor;
         }
