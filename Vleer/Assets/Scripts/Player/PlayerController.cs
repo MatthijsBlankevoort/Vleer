@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour {
     private SpriteRenderer mySpriteRenderer;
     private PauseScript pause;
     private Rigidbody2D rigidBody;
+    public int pauseInputDelay = 0;
 
 	// Use this for initialization
 	void Start () {
@@ -20,14 +21,20 @@ public class PlayerController : MonoBehaviour {
         pause = GameObject.FindGameObjectWithTag("GameController").GetComponent<PauseScript>();
         rigidBody = this.gameObject.GetComponent<Rigidbody2D>();
 	}
-	
-	// Update is called once per frame
-	void Update () {
+	void Update()
+    {
         if (pause.isPaused)
+        {
             return;
+        }
+        else if (pauseInputDelay > 0)
+        {
+            pauseInputDelay--;
+            return;
+        }
 
-
-        if (Input.GetKey(KeyCode.Joystick1Button0))
+        print(pauseInputDelay);
+        if (Input.GetKeyDown(KeyCode.Joystick1Button0))
         {
             mySpriteRenderer.color = greenColor;
         }
@@ -43,7 +50,6 @@ public class PlayerController : MonoBehaviour {
         {
             mySpriteRenderer.color = yellowColor;
         }
-
 
         //Controller controls
         rigidBody.velocity = Vector2.zero;

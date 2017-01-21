@@ -8,6 +8,8 @@ TagManager:
   - Enemy
   - Wall
   - PauseCanvas
+  - Main Menu GUI
+  - LoadText
   layers:
   - Default
   - TransparentFX
