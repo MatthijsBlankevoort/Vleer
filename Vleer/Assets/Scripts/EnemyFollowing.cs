@@ -22,9 +22,8 @@ public class EnemyFollowing : MonoBehaviour {
 	
 	// Update is called once per frame
 	void FixedUpdate () {
-        //rotate to look at the player
-        transform.LookAt(player.transform.position);
-        transform.Rotate(new Vector3(0, -90, 0), Space.Self);//correcting the original rotation
+
+        
 
         collidersInRadius = Physics2D.OverlapCircleAll(gameObject.transform.position, lookRadius);
 
@@ -36,11 +35,16 @@ public class EnemyFollowing : MonoBehaviour {
             {
                 RaycastHit2D hit =
                     Physics2D.Raycast(gameObject.transform.position, (player.transform.position - gameObject.transform.position));
-
-                if (Vector3.Distance(transform.position, player.transform.position) > 1f)
-                {//move if distance from target is greater than 1
-                    transform.Translate(new Vector3(speed * Time.deltaTime, 0, 0));
+                if (hit.collider.gameObject.tag == "Player")
+                {
+                    if (Vector3.Distance(transform.position, player.transform.position) > 1f)
+                    {//move if distance from target is greater than 1
+                        transform.Translate(new Vector3(speed * Time.deltaTime, 0, 0));
+                        transform.LookAt(player.transform.position);
+                        transform.Rotate(new Vector3(0, -90, 0), Space.Self);
+                    }
                 }
+
             }
         }
         
