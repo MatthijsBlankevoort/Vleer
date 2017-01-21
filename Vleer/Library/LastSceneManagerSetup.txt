@@ -1,15 +1,4 @@
-<<<<<<< HEAD
 sceneSetups:
 - path: Assets/_Scenes/Matthijs.unity
   isLoaded: 1
   isActive: 1
-=======
-<<<<<<< HEAD
-sceneSetups:
-- path: Assets/_Scenes/Demo Scene - Player Sonar.unity
-  isLoaded: 1
-  isActive: 1
-=======
-sceneSetups: []
->>>>>>> PlayerSprite
->>>>>>> master
