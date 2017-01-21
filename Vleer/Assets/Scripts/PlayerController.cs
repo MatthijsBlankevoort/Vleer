@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour {
 
     public float movementSpeed;
-    private Color32 redColor, greenColor, blueColor, yellowColor;
+    public static Color32 redColor, greenColor, blueColor, yellowColor;
     private SpriteRenderer mySpriteRenderer;
     private PauseScript pause;
 
