@@ -1,4 +1,8 @@
 sceneSetups:
+<<<<<<< HEAD
 - path: Assets/_Scenes/Menus/Game Over.unity
+=======
+- path: Assets/_Scenes/Demo Scene - Sonar Walls.unity
+>>>>>>> master
   isLoaded: 1
   isActive: 1
