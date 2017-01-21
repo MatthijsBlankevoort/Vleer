@@ -6,7 +6,8 @@ public class ScoreScript : MonoBehaviour {
 
     public int score = 0;
     public int lives = 3;
-    public GameObject[] enemies;
+    public List<GameObject> enemies;
+    public GameObject[] enemiesArray;
 
     public SpriteRenderer mySpriteRenderer;
     public SpriteRenderer enemySpriteRenderer;
@@ -14,12 +15,16 @@ public class ScoreScript : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         mySpriteRenderer = this.GetComponent<SpriteRenderer>();
-        enemies = GameObject.FindGameObjectsWithTag("Enemy");
+        enemiesArray = GameObject.FindGameObjectsWithTag("Enemy");
+        enemies = new List<GameObject>(enemiesArray);
     }
 	
 	// Update is called once per frame
 	void Update () {
-
+        if (enemies.Count <= 0)
+        {
+            Application.LoadLevel("Victory Screen");
+        }
 	}
 
     void OnCollisionEnter2D(Collision2D other)
@@ -28,13 +33,15 @@ public class ScoreScript : MonoBehaviour {
         {
             if (other.gameObject.GetComponent<SpriteRenderer>().color == mySpriteRenderer.color)
             {
-                score++;
+                score += 10;
                 Destroy(other.gameObject);
+                enemies.Remove(other.gameObject);
             }
             else
             {
                 lives--;
                 Destroy(other.gameObject);
+                enemies.Remove(other.gameObject);
             }
         }
     }
