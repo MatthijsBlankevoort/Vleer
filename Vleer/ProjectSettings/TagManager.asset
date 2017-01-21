@@ -7,6 +7,8 @@ TagManager:
   - Main Menu GUI
   - Enemy
   - Sonar
+  - LoadText
+  - PauseCanvas
   layers:
   - Default
   - TransparentFX

@@ -12,5 +12,11 @@ public class PlayerMovement : MonoBehaviour {
         float horSpeed = Input.GetAxis("Horizontal") * speed;
 
         gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(horSpeed, vertSpeed);
+
+        if(Input.GetKeyDown(KeyCode.L))
+        {
+            GameControllerBase.gameController.sceneLoader.LoadScene("Main Menu");
+        }
 	}
+
 }
