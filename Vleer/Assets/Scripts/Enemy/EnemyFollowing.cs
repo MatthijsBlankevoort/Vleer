@@ -30,9 +30,6 @@ public class EnemyFollowing : MonoBehaviour {
 	
 	// Update is called once per frame
 	void FixedUpdate () {
-
-        
-
         collidersInRadius = Physics2D.OverlapCircleAll(gameObject.transform.position, lookRadius);
 
         Debug.DrawRay(gameObject.transform.position, (player.transform.position - gameObject.transform.position), Color.black);
@@ -52,9 +49,7 @@ public class EnemyFollowing : MonoBehaviour {
                         transform.Rotate(new Vector3(0, -90, 0), Space.Self);
                     }
                 }
-
             }
         }
-        
 	}
 }
