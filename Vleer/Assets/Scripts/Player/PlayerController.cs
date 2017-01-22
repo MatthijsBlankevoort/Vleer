@@ -7,7 +7,7 @@ public class PlayerController : MonoBehaviour {
     public float movementSpeed;
     public static Color32 redColor = new Color32(255, 0, 0, 255);
     public static Color32 greenColor = new Color32(0, 255, 0, 255);
-    public static Color32 blueColor = new Color32(0, 0, 210, 255);
+    public static Color32 blueColor = new Color32(0, 75, 255, 255);
     public static Color32 yellowColor = new Color32(255, 235, 0, 255);
     public enum PlayerColor { Random, Red, Green, Blue, Yellow };
     private PlayerColor color = PlayerColor.Red;

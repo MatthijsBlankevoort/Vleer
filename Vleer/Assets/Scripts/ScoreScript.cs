@@ -9,12 +9,11 @@ public class ScoreScript : MonoBehaviour {
     public float comboTimerStandard = 2f;
     public float comboChargeStart = 10f;
     public float comboMultiplier = 1.5f;
-    public GameObject[] enemies;
+    
     public List<GameObject> enemies;
     public GameObject[] enemiesArray;
 
     public SpriteRenderer mySpriteRenderer;
-    public SpriteRenderer enemySpriteRenderer;
 
     private float comboTimer;
     private float comboChain = 0;
@@ -23,9 +22,8 @@ public class ScoreScript : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         mySpriteRenderer = this.GetComponent<SpriteRenderer>();
-        enemies = GameObject.FindGameObjectsWithTag("Enemy");
-        playerSonar = this.GetComponent<PlayerSonar>();
         enemiesArray = GameObject.FindGameObjectsWithTag("Enemy");
+        playerSonar = this.GetComponent<PlayerSonar>();
         enemies = new List<GameObject>(enemiesArray);
     }
 	
