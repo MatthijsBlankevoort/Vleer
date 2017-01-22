@@ -58,4 +58,5 @@ public class SceneLoader : MonoBehaviour {
 
         nowLoading = false;
     }
+        
 }

@@ -566,6 +566,12 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 388521638}
+--- !u!114 &421974144 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114177423425516530, guid: 0d848ee0a3916c449bcf2cafbd82196f,
+    type: 2}
+  m_PrefabInternal: {fileID: 1436023046}
+  m_Script: {fileID: 11500000, guid: d6f15d3a04dae5f438486fafdb28fce8, type: 3}
 --- !u!20 &457100521 stripped
 Camera:
   m_PrefabParentObject: {fileID: 20677350824332832, guid: a6d499f8bd8f2b34880bd6123c52cde5,
@@ -739,7 +745,7 @@ GameObject:
   - component: {fileID: 1227917817}
   - component: {fileID: 1227917816}
   m_Layer: 0
-  m_Name: Level Select Button
+  m_Name: Level 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -802,26 +808,15 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2070096601}
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 421974144}
+        m_MethodName: LoadScene
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 1297036988}
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: Level 2
           m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
@@ -858,7 +853,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Level Select
+  m_Text: 2
 --- !u!222 &1227917818
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -974,6 +969,48 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 729bbc8cdcbbbed4fa47228c0ce64ea2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1001 &1436023046
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4588025953145276, guid: 0d848ee0a3916c449bcf2cafbd82196f, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4588025953145276, guid: 0d848ee0a3916c449bcf2cafbd82196f, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4588025953145276, guid: 0d848ee0a3916c449bcf2cafbd82196f, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4588025953145276, guid: 0d848ee0a3916c449bcf2cafbd82196f, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4588025953145276, guid: 0d848ee0a3916c449bcf2cafbd82196f, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4588025953145276, guid: 0d848ee0a3916c449bcf2cafbd82196f, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4588025953145276, guid: 0d848ee0a3916c449bcf2cafbd82196f, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4588025953145276, guid: 0d848ee0a3916c449bcf2cafbd82196f, type: 2}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 0d848ee0a3916c449bcf2cafbd82196f, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &1675115927
 GameObject:
   m_ObjectHideFlags: 0
@@ -986,7 +1023,7 @@ GameObject:
   - component: {fileID: 1675115928}
   - component: {fileID: 1675115931}
   m_Layer: 0
-  m_Name: Start New Game Button
+  m_Name: Level 1
   m_TagString: Main Menu GUI
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1024,7 +1061,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Start
+  m_Text: 1
 --- !u!222 &1675115929
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1088,15 +1125,15 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1297036993}
-        m_MethodName: StartGame
-        m_Mode: 1
+      - m_Target: {fileID: 421974144}
+        m_MethodName: LoadScene
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: Level 1
           m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
@@ -1113,7 +1150,7 @@ GameObject:
   - component: {fileID: 1966033062}
   - component: {fileID: 1966033061}
   m_Layer: 0
-  m_Name: Controller Button
+  m_Name: Level 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1176,26 +1213,15 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1099281503}
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 421974144}
+        m_MethodName: LoadScene
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 1297036988}
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: Level 3
           m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
@@ -1232,7 +1258,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Controls
+  m_Text: 3
 --- !u!222 &1966033063
 CanvasRenderer:
   m_ObjectHideFlags: 0

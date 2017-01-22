@@ -58,7 +58,7 @@ public class PlayerController : MonoBehaviour {
 
         ////Controller controls
         
-        //transform.Translate(new Vector2(Input.GetAxisRaw("Horizontal") * movementSpeed * Time.deltaTime, Input.GetAxisRaw("Vertical") * movementSpeed * Time.deltaTime));
+        transform.Translate(new Vector2(Input.GetAxisRaw("Horizontal") * movementSpeed * Time.deltaTime, Input.GetAxisRaw("Vertical") * movementSpeed * Time.deltaTime));
 
         //Arrow keys controls for testing
         rigidBody.velocity = Vector2.zero;
