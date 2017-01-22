@@ -25,6 +25,7 @@ public class ScreenShake : MonoBehaviour {
     {
         if (shakeAmount > 0)
         {
+            transform.localPosition = new Vector3(0, 0, transform.position.z);
             Vector3 camPos = transform.position;
 
             float offsetX = Random.value * shakeAmount * 2 - shakeAmount;
