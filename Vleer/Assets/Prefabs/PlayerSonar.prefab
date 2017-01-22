@@ -23,8 +23,8 @@ GameObject:
   - component: {fileID: 114012887432796624}
   - component: {fileID: 58097269512613054}
   m_Layer: 2
-  m_Name: Sonar
-  m_TagString: Sonar
+  m_Name: PlayerSonar
+  m_TagString: PlayerSonar
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

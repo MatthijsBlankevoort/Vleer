@@ -1,8 +1,4 @@
 sceneSetups:
-<<<<<<< HEAD
 - path: Assets/_Scenes/Demo Scene - Enemy.unity
-=======
-- path: Assets/_Scenes/Matthijs.unity
->>>>>>> master
   isLoaded: 1
   isActive: 1

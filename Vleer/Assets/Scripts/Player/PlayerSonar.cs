@@ -42,7 +42,7 @@ public class PlayerSonar : MonoBehaviour {
             timeFromNextSonar = secondsBetweenSonars;
         }
 
-        if (Input.GetButtonDown("Fire Large Sonar") && charge >= fullCharge)
+        if (Input.GetAxis("Fire Large Sonar") > 0.1f && charge >= fullCharge)
         {
             charge = 0;
             FireLargeSonar();

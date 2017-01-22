@@ -10,6 +10,8 @@ TagManager:
   - PauseCanvas
   - Main Menu GUI
   - LoadText
+  - PlayerSonar
+  - BigSonar
   layers:
   - Default
   - TransparentFX
