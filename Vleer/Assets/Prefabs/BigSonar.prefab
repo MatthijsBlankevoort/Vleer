@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 108138318712736724}
   m_Layer: 0
   m_Name: BigSonar
-  m_TagString: Untagged
+  m_TagString: BigSonar
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

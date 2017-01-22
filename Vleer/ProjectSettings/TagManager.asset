@@ -11,6 +11,8 @@ TagManager:
   - Main Menu GUI
   - LoadText
   - Score
+  - PlayerSonar
+  - BigSonar
   layers:
   - Default
   - TransparentFX
