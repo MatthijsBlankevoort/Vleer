@@ -9,8 +9,7 @@ public class GenerateFootsteps : MonoBehaviour
     public GameObject leftFoot, rightFoot;
 
     // Used to change enemy sprite and soundwave color after a player sonar collision has occured
-    public enum PlayerColor { Random, Red, Green, Blue, Yellow };
-    public PlayerColor playerColor = PlayerColor.Random;
+    public PlayerController.PlayerColor myColor = PlayerController.PlayerColor.Random;
     private Color color = Color.white;
     private SpriteRenderer spriteRenderer;
 
@@ -54,42 +53,46 @@ public class GenerateFootsteps : MonoBehaviour
 
         currentFoot = (Foot)Random.Range(0, 1);
 
-        switch (playerColor)
+        switch (myColor)
         {
-            case PlayerColor.Random:
+            case PlayerController.PlayerColor.Random:
                 switch (Random.Range(0, 4))
                 {
                     case 0:
                         color = PlayerController.redColor;
+                        myColor = PlayerController.PlayerColor.Red;
                         break;
 
                     case 1:
                         color = PlayerController.greenColor;
+                        myColor = PlayerController.PlayerColor.Green;
                         break;
 
                     case 2:
                         color = PlayerController.blueColor;
+                        myColor = PlayerController.PlayerColor.Blue;
                         break;
 
                     case 3:
                         color = PlayerController.yellowColor;
+                        myColor = PlayerController.PlayerColor.Yellow;
                         break;
                 }
                 break;
 
-            case PlayerColor.Red:
+            case PlayerController.PlayerColor.Red:
                 color = PlayerController.redColor;
                 break;
 
-            case PlayerColor.Green:
+            case PlayerController.PlayerColor.Green:
                 color = PlayerController.greenColor;
                 break;
 
-            case PlayerColor.Blue:
+            case PlayerController.PlayerColor.Blue:
                 color = PlayerController.blueColor;
                 break;
 
-            case PlayerColor.Yellow:
+            case PlayerController.PlayerColor.Yellow:
                 color = PlayerController.yellowColor;
                 break;
         }
@@ -180,7 +183,7 @@ public class GenerateFootsteps : MonoBehaviour
         }
 
         // Debug
-        //*
+        /*
         if (Input.GetKeyDown(KeyCode.Return))
         {
             spriteRenderer.color = color;

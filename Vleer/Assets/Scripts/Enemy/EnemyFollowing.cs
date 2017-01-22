@@ -19,11 +19,11 @@ public class EnemyFollowing : MonoBehaviour {
         }
 	}
 
-    void OnGizmoDraw ()
-    {
-        Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(gameObject.transform.position, lookRadius);
-    }
+    //void OnDrawGizmos()
+    //{
+    //    Gizmos.color = Color.red;
+    //    Gizmos.DrawWireSphere(gameObject.transform.position, lookRadius);
+    //}
 
     void OnCollisionEnter (Collision col)
     {

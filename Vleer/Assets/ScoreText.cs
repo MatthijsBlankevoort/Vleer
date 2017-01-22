@@ -9,7 +9,7 @@ public class ScoreText : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         myText = GetComponent<Text>();
-        scoreScript = GameObject.FindGameObjectWithTag("Score").GetComponent<SaveScore>();
+        scoreScript = GameObject.FindGameObjectWithTag("GameController").GetComponent<SaveScore>();
 	}
 	
 	// Update is called once per frame

@@ -42,7 +42,7 @@ GameObject:
   - component: {fileID: 114908332286579480}
   - component: {fileID: 82949517041001046}
   - component: {fileID: 82517714612614016}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Enemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -72,7 +72,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1439032275775462}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -8, y: 4.25, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4922510582151492}
@@ -340,7 +340,7 @@ MonoBehaviour:
     type: 2}
   leftFoot: {fileID: 1039281565814754}
   rightFoot: {fileID: 1679892979079298}
-  playerColor: 0
+  myColor: 0
   stepGrowthSpeed: 1
   stepFadeSize: 0.1
   stepFadeTimer: 0.5

@@ -7,7 +7,7 @@ public class SaveScore : MonoBehaviour {
     public int myScore;
 	// Use this for initialization
 	void Start () {
-        DontDestroyOnLoad(this);
+        DontDestroyOnLoad(gameObject);
 	}
 	
 	// Update is called once per frame

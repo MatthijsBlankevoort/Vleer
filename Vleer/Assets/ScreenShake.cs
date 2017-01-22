@@ -5,11 +5,6 @@ using UnityEngine;
 public class ScreenShake : MonoBehaviour {
     private float shakeAmount = 0;
 
-    void Awake()
-    {
-
-    }
-
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space))
@@ -30,7 +25,7 @@ public class ScreenShake : MonoBehaviour {
     {
         if (shakeAmount > 0)
         {
-            Vector3 camPos = this.transform.position;
+            Vector3 camPos = transform.position;
 
             float offsetX = Random.value * shakeAmount * 2 - shakeAmount;
             float offsetY = Random.value * shakeAmount * 2 - shakeAmount;
@@ -45,6 +40,6 @@ public class ScreenShake : MonoBehaviour {
     void StopShake()
     {
         CancelInvoke("DoShake");
-        this.transform.localPosition = Vector3.zero;
+        transform.localPosition = new Vector3(0, 0, transform.position.z);
     }
 }

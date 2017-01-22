@@ -1,8 +1,4 @@
 sceneSetups:
-<<<<<<< HEAD
 - path: Assets/_Scenes/Level1.unity
-=======
-- path: Assets/_Scenes/Demo Scene - Enemy.unity
->>>>>>> EnemyFootsteps
   isLoaded: 1
   isActive: 1

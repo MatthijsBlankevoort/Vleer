@@ -31,23 +31,4 @@ public class ScoreScript : MonoBehaviour {
         }
 
 	}
-
-    void OnCollisionEnter2D(Collision2D other)
-    {
-        if (other.gameObject.tag == "Enemy")
-        {
-            if (other.gameObject.GetComponent<SpriteRenderer>().color == mySpriteRenderer.color)
-            {
-                score += 10;
-                Destroy(other.gameObject);
-                enemies.Remove(other.gameObject);
-            }
-            else
-            {
-                lives--;
-                Destroy(other.gameObject);
-                enemies.Remove(other.gameObject);
-            }
-        }
-    }
 }
