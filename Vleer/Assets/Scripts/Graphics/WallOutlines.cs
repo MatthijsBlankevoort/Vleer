@@ -18,9 +18,10 @@ public class WallOutlines : MonoBehaviour {
             gameObject.GetComponent<Renderer>().material.color.b, 0);
 	}
 
-    void OnTriggerEnter2D(Collider2D col)
+    void OnTriggerEnter2D(Collider2D other)
     {
-        if (col.gameObject.tag == "PlayerSonar" || col.gameObject.tag == "Sonar" || col.gameObject.tag == "BigSonar")
+        print("a");
+        if (other.gameObject.tag == "PlayerSonar" || other.gameObject.tag == "Sonar" || other.gameObject.tag == "BigSonar")
         {
             if(fadeOutCoroutine != null)
                 StopCoroutine(fadeOutCoroutine);

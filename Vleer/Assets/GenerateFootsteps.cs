@@ -258,10 +258,18 @@ public class GenerateFootsteps : MonoBehaviour
         if (other.gameObject.CompareTag("PlayerSonar") || other.gameObject.CompareTag("BigSonar"))
         {
             Physics2D.IgnoreCollision(GetComponent<CircleCollider2D>(), other, true);
-            spriteRenderer.color = new Color(color.r, color.g, color.b, 1f);
+            
+            if (other.gameObject.CompareTag("PlayerSonar"))
+            {
+                spriteRenderer.color = new Color(color.r, color.g, color.b, 1f);
+                spotted = true;
+            }
+            else
+            {
+                spriteRenderer.color = new Color(spriteRenderer.color.r, spriteRenderer.color.g, spriteRenderer.color.b, 1f);
+            }
+
             showSprite = true;
-                
-            spotted = true;
         }
     }
 
