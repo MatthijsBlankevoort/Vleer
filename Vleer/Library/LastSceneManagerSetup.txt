@@ -1,4 +1,16 @@
 sceneSetups:
+<<<<<<< HEAD
 - path: Assets/_Scenes/Levels/Level2Ian.unity
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+- path: Assets/_Scenes/Demo Scene - Camera follows+ boundaries.unity
+=======
+- path: Assets/_Scenes/Menus/Splash SCreen.unity
+>>>>>>> master
+=======
+- path: Assets/_Scenes/Level1.unity
+>>>>>>> Enemies
+>>>>>>> master
   isLoaded: 1
   isActive: 1

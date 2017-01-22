@@ -43,6 +43,12 @@ public class GenerateFootsteps : MonoBehaviour
 
     private bool showSprite = false, spotted = false;
 
+    public float stepScreenShakeAmount = 0f, stepScreenShakeDuration = 0f;
+    public float roarScreenShakeAmount = 0f, roarScreenShakeDuration = 0f;
+    private ScreenShake cameraShake;
+
+    public float roarPitchMin = 1f, roarPitchMax = 1f;
+
     void Start()
     {
         enemyFollowScript = GetComponent<EnemyFollowing>();
@@ -102,6 +108,8 @@ public class GenerateFootsteps : MonoBehaviour
         idleTimer = Random.Range(idleTimerRange.x, idleTimerRange.y);
 
         roarSoundWavesDefault = roarSoundWaves;
+
+        cameraShake = Camera.main.GetComponent<ScreenShake>();
     }
 
     void Update()
@@ -169,7 +177,7 @@ public class GenerateFootsteps : MonoBehaviour
                 {
                     Roar();
 
-                    if (roarSoundWaves > 0)
+                    if (roarSoundWaves > 1)
                     {
                         roarSoundWaves--;
                         roarIntervalTimer = roarIntervalTimerDefault;
@@ -204,6 +212,11 @@ public class GenerateFootsteps : MonoBehaviour
         {
             footStep = Instantiate(soundWavePrefab, rightFoot.transform.position, Quaternion.identity);
             currentFoot = Foot.LeftFoot;
+        }
+
+        if (stepScreenShakeAmount > 0)
+        {
+            cameraShake.Shake(stepScreenShakeAmount, stepScreenShakeDuration);
         }
 
         footStepSound.pitch = Random.Range(.9f, 1.1f);
@@ -244,14 +257,11 @@ public class GenerateFootsteps : MonoBehaviour
         // Implement collision with player sonar so the sprite color and sound wave color change to the enemy's actual color
         if (other.gameObject.CompareTag("PlayerSonar") || other.gameObject.CompareTag("BigSonar"))
         {
-            if (!spotted)
-            {
-                Physics2D.IgnoreCollision(GetComponent<CircleCollider2D>(), other, true);
-                spriteRenderer.color = new Color(color.r, color.g, color.b, 1f);
-                showSprite = true;
+            Physics2D.IgnoreCollision(GetComponent<CircleCollider2D>(), other, true);
+            spriteRenderer.color = new Color(color.r, color.g, color.b, 1f);
+            showSprite = true;
                 
-                spotted = true;
-            }
+            spotted = true;
         }
     }
 
@@ -275,12 +285,20 @@ public class GenerateFootsteps : MonoBehaviour
     public void RoaringState()
     {
         idleRoar.volume = roarStartVolume;
+        idleRoar.pitch = Random.Range(roarPitchMin, roarPitchMax);
         idleRoar.Play();
 
         // Reset amount of roar soundwaves to generate
         roarSoundWaves = roarSoundWavesDefault;
         roarIntervalTimer = roarIntervalTimerDefault;
 
+        if (roarScreenShakeAmount > 0)
+        {
+            cameraShake.Shake(roarScreenShakeAmount, roarScreenShakeDuration);
+        }
+
         state = State.Roaring;
+
+        Roar();
     }
 }
