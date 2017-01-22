@@ -39,7 +39,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1705637106008424}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -7.26, y: 3.59, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -110,14 +110,14 @@ MonoBehaviour:
   secondsBetweenSonars: 2
   sonarPrefab: {fileID: 1774359743592246, guid: 67c6db38cb02deb45866829c087c8a34,
     type: 2}
-  bigGrowthSpeed: 2
-  bigFadeSize: 2
+  bigGrowthSpeed: 3
+  bigFadeSize: 4
   bigFadeTimer: 4
   bigSonarPrefab: {fileID: 1179427400657818, guid: 27af4cbbd7400774aa7458092eb03de3,
     type: 2}
-  fullCharge: 20
+  fullCharge: 100
   beginWithFullCharge: 1
-  rechargeAmount: 1
+  rechargeAmount: 10
   everyThisManySeconds: 0.5
 --- !u!114 &114934153844000460
 MonoBehaviour:
@@ -133,7 +133,7 @@ MonoBehaviour:
   score: 0
   lives: 1
   comboTimerStandard: 2
-  comboChargeStart: 15
+  comboChargeStart: 10
   comboMultiplier: 1.5
   enemies: []
   enemiesArray: []
