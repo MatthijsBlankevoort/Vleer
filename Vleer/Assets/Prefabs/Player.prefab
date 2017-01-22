@@ -11,6 +11,22 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 1705637106008424}
   m_IsPrefabParent: 1
+--- !u!1 &1087582055214284
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4019937332519934}
+  - component: {fileID: 114938061030610562}
+  m_Layer: 0
+  m_Name: Score
+  m_TagString: Score
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1705637106008424
 GameObject:
   m_ObjectHideFlags: 0
@@ -32,6 +48,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!4 &4019937332519934
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1087582055214284}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4304010280836632}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4304010280836632
 Transform:
   m_ObjectHideFlags: 1
@@ -40,8 +69,9 @@ Transform:
   m_GameObject: {fileID: 1705637106008424}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.39, y: 0.38, z: 1}
-  m_Children: []
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4019937332519934}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -78,7 +108,7 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 1.2500001
+  m_Radius: 0.5
 --- !u!114 &114853849208773380
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -92,6 +122,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movementSpeed: 3
   pauseInputDelay: 10
+  scoreScript: {fileID: 114934153844000460}
 --- !u!114 &114907106781715212
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -107,7 +138,7 @@ MonoBehaviour:
   fadeSize: 1
   fadeTimer: 1
   secondsBetweenSonars: 2
-  sonarPrefab: {fileID: 1774359743592246, guid: 0aa101c3c2bd2724e958735c97256fef,
+  sonarPrefab: {fileID: 1774359743592246, guid: 67c6db38cb02deb45866829c087c8a34,
     type: 2}
   bigGrowthSpeed: 2
   bigFadeSize: 2
@@ -130,13 +161,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   score: 0
-  lives: 3
+  lives: 1
   comboTimerStandard: 2
   comboChargeStart: 15
   comboMultiplier: 1.5
   enemies: []
+  enemiesArray: []
   mySpriteRenderer: {fileID: 0}
   enemySpriteRenderer: {fileID: 0}
+--- !u!114 &114938061030610562
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1087582055214284}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c171446a678075e44aeca12d30e69dd3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 114853849208773380}
+  myScore: 0
 --- !u!212 &212801339060193476
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -168,7 +213,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: afdbfa98574cca64780abb1af6f0c578, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 32fff7c1ff8a1374088ffb50720a1be9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

@@ -8,17 +8,22 @@ public class EnemyFollowing : MonoBehaviour {
     public float speed;
     private GameObject player;
     private Collider2D[] collidersInRadius;
+    public GenerateFootsteps footStepScript;
 
 	// Use this for initialization
 	void Start () {
         player = GameObject.FindGameObjectWithTag("Player");
+        if (footStepScript == null)
+        {
+            footStepScript = GetComponent<GenerateFootsteps>();
+        }
 	}
 
-    void OnGizmoDraw ()
-    {
-        Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(gameObject.transform.position, lookRadius);
-    }
+    //void OnDrawGizmos()
+    //{
+    //    Gizmos.color = Color.red;
+    //    Gizmos.DrawWireSphere(gameObject.transform.position, lookRadius);
+    //}
 
     void OnCollisionEnter (Collision col)
     {
@@ -30,9 +35,6 @@ public class EnemyFollowing : MonoBehaviour {
 	
 	// Update is called once per frame
 	void FixedUpdate () {
-
-        
-
         collidersInRadius = Physics2D.OverlapCircleAll(gameObject.transform.position, lookRadius);
 
         Debug.DrawRay(gameObject.transform.position, (player.transform.position - gameObject.transform.position), Color.black);
@@ -50,11 +52,19 @@ public class EnemyFollowing : MonoBehaviour {
                         transform.Translate(new Vector3(speed * Time.deltaTime, 0, 0));
                         transform.LookAt(player.transform.position);
                         transform.Rotate(new Vector3(0, -90, 0), Space.Self);
+
+                        footStepScript.ChasingState();
+                    }
+                    else if (footStepScript.state == GenerateFootsteps.State.Chasing)
+                    {
+                        footStepScript.IdleState();
                     }
                 }
-
+                else if (footStepScript.state == GenerateFootsteps.State.Chasing)
+                {
+                    footStepScript.IdleState();
+                }
             }
         }
-        
 	}
 }

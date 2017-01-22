@@ -5,18 +5,20 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour {
 
     public float movementSpeed;
-    public static Color32 redColor, greenColor, blueColor, yellowColor;
+    public static Color32 redColor = new Color32(255, 0, 0, 255);
+    public static Color32 greenColor = new Color32(0, 255, 0, 255);
+    public static Color32 blueColor = new Color32(0, 0, 210, 255);
+    public static Color32 yellowColor = new Color32(255, 235, 0, 255);
+    public enum PlayerColor { Random, Red, Green, Blue, Yellow };
+    private PlayerColor color = PlayerColor.Red;
     private SpriteRenderer mySpriteRenderer;
     private PauseScript pause;
     private Rigidbody2D rigidBody;
     public int pauseInputDelay = 0;
+    public ScoreScript scoreScript;
 
 	// Use this for initialization
 	void Start () {
-        redColor = new Color32(255,0,0,255);
-        greenColor = new Color32(0,255,0,255);
-        blueColor = new Color32(0,0, 210, 255);
-        yellowColor = new Color32(255,235,0,255);
         mySpriteRenderer = this.GetComponent<SpriteRenderer>();
         pause = GameObject.FindGameObjectWithTag("GameController").GetComponent<PauseScript>();
         rigidBody = this.gameObject.GetComponent<Rigidbody2D>();
@@ -35,19 +37,23 @@ public class PlayerController : MonoBehaviour {
 
         if (Input.GetKeyDown(KeyCode.Joystick1Button0))
         {
-            mySpriteRenderer.color = greenColor;
+            Color = PlayerColor.Green;
+            //Camera.main.GetComponent<ScreenShake>().Shake(0.05f, 0.1f);
         }
         else if (Input.GetKeyDown(KeyCode.Joystick1Button1))
         {
-            mySpriteRenderer.color = redColor;
+            Color = PlayerColor.Red;
+            //Camera.main.GetComponent<ScreenShake>().Shake(0.05f, 0.1f);
         }
         else if (Input.GetKeyDown(KeyCode.Joystick1Button2))
         {
-            mySpriteRenderer.color = blueColor;
+            Color = PlayerColor.Blue;
+            //Camera.main.GetComponent<ScreenShake>().Shake(0.05f, 0.1f);
         }
         else if (Input.GetKeyDown(KeyCode.Joystick1Button3))
         {
-            mySpriteRenderer.color = yellowColor;
+            Color = PlayerColor.Yellow;
+            //Camera.main.GetComponent<ScreenShake>().Shake(0.05f, 0.1f);
         }
 
         ////Controller controls
@@ -81,6 +87,58 @@ public class PlayerController : MonoBehaviour {
         //    {
         //        rigidBody.velocity = Vector2.zero;
         //    }
+    }
+
+    void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.tag == "Enemy")
+        {
+            if (other.gameObject.GetComponent<GenerateFootsteps>().myColor == color)
+            {
+                scoreScript.score += 10;
+                Destroy(other.gameObject);
+                scoreScript.enemies.Remove(other.gameObject);
+            }
+            else
+            {
+                // TO DO: Move lives here
+                scoreScript.lives--;
+                Destroy(other.gameObject);
+                scoreScript.enemies.Remove(other.gameObject);
+            }
+        }
+    }
+
+    private PlayerColor Color
+    {
+        get
+        {
+            return color;
+        }
+
+        set
+        {
+            if (value == PlayerColor.Red)
+            {
+                color = value;
+                mySpriteRenderer.color = redColor;
+            }
+            else if (value == PlayerColor.Green)
+            {
+                color = value;
+                mySpriteRenderer.color = greenColor;
+            }
+            else if (value == PlayerColor.Blue)
+            {
+                color = value;
+                mySpriteRenderer.color = blueColor;
+            }
+            else if (value == PlayerColor.Yellow)
+            {
+                color = value;
+                mySpriteRenderer.color = yellowColor;
+            }
+        }
     }
 }
     

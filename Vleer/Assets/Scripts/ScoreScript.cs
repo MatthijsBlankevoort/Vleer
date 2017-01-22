@@ -10,6 +10,8 @@ public class ScoreScript : MonoBehaviour {
     public float comboChargeStart = 10f;
     public float comboMultiplier = 1.5f;
     public GameObject[] enemies;
+    public List<GameObject> enemies;
+    public GameObject[] enemiesArray;
 
     public SpriteRenderer mySpriteRenderer;
     public SpriteRenderer enemySpriteRenderer;
@@ -23,6 +25,8 @@ public class ScoreScript : MonoBehaviour {
         mySpriteRenderer = this.GetComponent<SpriteRenderer>();
         enemies = GameObject.FindGameObjectsWithTag("Enemy");
         playerSonar = this.GetComponent<PlayerSonar>();
+        enemiesArray = GameObject.FindGameObjectsWithTag("Enemy");
+        enemies = new List<GameObject>(enemiesArray);
     }
 	
 	// Update is called once per frame
@@ -36,6 +40,7 @@ public class ScoreScript : MonoBehaviour {
     void OnCollisionEnter2D(Collision2D other)
     {
         if (other.gameObject.tag == "Enemy")
+        if (lives <= 0)
         {
             if (other.gameObject.GetComponent<SpriteRenderer>().color == mySpriteRenderer.color)
             {
@@ -63,6 +68,12 @@ public class ScoreScript : MonoBehaviour {
                     comboChain = 0;
                 }
             }
+            Application.LoadLevel("Game Over");
         }
-    }
+        else if (enemies.Count <= 0)
+        {
+            Application.LoadLevel("Victory Screen");
+        }
+
+	}
 }
