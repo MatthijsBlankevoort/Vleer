@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour {
     private PauseScript pause;
     private Rigidbody2D rigidBody;
     public int pauseInputDelay = 0;
+    
 
 	// Use this for initialization
 	void Start () {
@@ -36,18 +37,22 @@ public class PlayerController : MonoBehaviour {
         if (Input.GetKeyDown(KeyCode.Joystick1Button0))
         {
             mySpriteRenderer.color = greenColor;
+            Camera.main.GetComponent<ScreenShake>().Shake(0.05f, 0.1f);
         }
         else if (Input.GetKeyDown(KeyCode.Joystick1Button1))
         {
             mySpriteRenderer.color = redColor;
+            Camera.main.GetComponent<ScreenShake>().Shake(0.05f, 0.1f);
         }
         else if (Input.GetKeyDown(KeyCode.Joystick1Button2))
         {
             mySpriteRenderer.color = blueColor;
+            Camera.main.GetComponent<ScreenShake>().Shake(0.05f, 0.1f);
         }
         else if (Input.GetKeyDown(KeyCode.Joystick1Button3))
         {
             mySpriteRenderer.color = yellowColor;
+            Camera.main.GetComponent<ScreenShake>().Shake(0.05f, 0.1f);
         }
 
         ////Controller controls
