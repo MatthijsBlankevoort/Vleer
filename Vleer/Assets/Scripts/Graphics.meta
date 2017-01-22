@@ -1,7 +1,13 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 602a35dd62b52d04d9bf8e0619f35223
 folderAsset: yes
 timeCreated: 1485091029
+=======
+guid: 3c9027c8f1ad16045b20459eb11c51cd
+folderAsset: yes
+timeCreated: 1485093478
+>>>>>>> aap
 licenseType: Free
 DefaultImporter:
   userData: 

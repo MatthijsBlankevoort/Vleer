@@ -325,7 +325,7 @@ MonoBehaviour:
   footStepSound: {fileID: 82473858587925828}
   idleRoar: {fileID: 82862932990674062}
   idleTimerRange: {x: 8, y: 12}
-  roarGrowthSpeed: 0.5
+  roarGrowthSpeed: 1
   roarFadeSize: 0.5
   roarFadeTimer: 1
   roarIntervalTimer: 0.4
