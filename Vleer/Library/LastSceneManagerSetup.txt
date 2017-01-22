@@ -1,4 +1,8 @@
 sceneSetups:
+<<<<<<< HEAD
+- path: Assets/_Scenes/Demo Scene - Camera follows+ boundaries.unity
+=======
 - path: Assets/_Scenes/Menus/Splash SCreen.unity
+>>>>>>> master
   isLoaded: 1
   isActive: 1

@@ -35,58 +35,58 @@ public class PlayerController : MonoBehaviour {
             return;
         }
 
-        if (Input.GetKeyDown(KeyCode.Joystick1Button0))
+        if (Input.GetKeyDown(KeyCode.Joystick1Button0) || Input.GetKeyDown(KeyCode.Q))
         {
             Color = PlayerColor.Green;
             //Camera.main.GetComponent<ScreenShake>().Shake(0.05f, 0.1f);
         }
-        else if (Input.GetKeyDown(KeyCode.Joystick1Button1))
+        else if (Input.GetKeyDown(KeyCode.Joystick1Button1) || Input.GetKeyDown(KeyCode.W))
         {
             Color = PlayerColor.Red;
             //Camera.main.GetComponent<ScreenShake>().Shake(0.05f, 0.1f);
         }
-        else if (Input.GetKeyDown(KeyCode.Joystick1Button2))
+        else if (Input.GetKeyDown(KeyCode.Joystick1Button2) || Input.GetKeyDown(KeyCode.E))
         {
             Color = PlayerColor.Blue;
             //Camera.main.GetComponent<ScreenShake>().Shake(0.05f, 0.1f);
         }
-        else if (Input.GetKeyDown(KeyCode.Joystick1Button3))
+        else if (Input.GetKeyDown(KeyCode.Joystick1Button3) || Input.GetKeyDown(KeyCode.R))
         {
             Color = PlayerColor.Yellow;
             //Camera.main.GetComponent<ScreenShake>().Shake(0.05f, 0.1f);
         }
 
         ////Controller controls
-        //rigidBody.velocity = Vector2.zero;
-        transform.Translate(new Vector2(Input.GetAxisRaw("Horizontal") * movementSpeed * Time.deltaTime, Input.GetAxisRaw("Vertical") * movementSpeed * Time.deltaTime));
+        
+        //transform.Translate(new Vector2(Input.GetAxisRaw("Horizontal") * movementSpeed * Time.deltaTime, Input.GetAxisRaw("Vertical") * movementSpeed * Time.deltaTime));
 
-        //    //Arrow keys controls for testing
-        //    rigidBody.velocity = Vector2.zero;
+        //Arrow keys controls for testing
+        rigidBody.velocity = Vector2.zero;
 
-        //    if (Input.GetKey(KeyCode.UpArrow))
-        //    {
-
-        //        rigidBody.velocity += new Vector2(0,  movementSpeed * Time.deltaTime);
-        //    }
-        //    if (Input.GetKey(KeyCode.DownArrow))
-        //    {
-
-        //        rigidBody.velocity += new Vector2(0, -movementSpeed * Time.deltaTime);
-        //    }
-        //    if (Input.GetKey(KeyCode.LeftArrow))
-        //    {
-
-        //        rigidBody.velocity += new Vector2(-movementSpeed * Time.deltaTime, 0);
-        //    }
-        //    if (Input.GetKey(KeyCode.RightArrow))
-        //    {
-
-        //        rigidBody.velocity += new Vector2(movementSpeed * Time.deltaTime, 0);
-        //    }
-        //    if(!Input.GetKey(KeyCode.UpArrow) && !Input.GetKey(KeyCode.DownArrow) && !Input.GetKey(KeyCode.LeftArrow) && !Input.GetKey(KeyCode.RightArrow))
-        //    {
-        //        rigidBody.velocity = Vector2.zero;
-        //    }
+        if (Input.GetKey(KeyCode.UpArrow))
+        {
+            transform.Translate(new Vector2(0, movementSpeed * Time.deltaTime));
+            //rigidBody.velocity += new Vector2(0, movementSpeed * Time.deltaTime);
+        }
+        if (Input.GetKey(KeyCode.DownArrow))
+        {
+            transform.Translate(new Vector2(0, -movementSpeed * Time.deltaTime));
+            //rigidBody.velocity += new Vector2(0, -movementSpeed * Time.deltaTime);
+        }
+        if (Input.GetKey(KeyCode.LeftArrow))
+        {
+            transform.Translate(new Vector2(-movementSpeed * Time.deltaTime, 0));
+            //rigidBody.velocity += new Vector2(-movementSpeed * Time.deltaTime, 0);
+        }
+        if (Input.GetKey(KeyCode.RightArrow))
+        {
+            transform.Translate(new Vector2(movementSpeed * Time.deltaTime, 0));
+           // rigidBody.velocity += new Vector2(movementSpeed * Time.deltaTime, 0);
+        }
+        if (!Input.GetKey(KeyCode.UpArrow) && !Input.GetKey(KeyCode.DownArrow) && !Input.GetKey(KeyCode.LeftArrow) && !Input.GetKey(KeyCode.RightArrow))
+        {
+            //rigidBody.velocity = Vector2.zero;
+        }
     }
 
     void OnCollisionEnter2D(Collision2D other)
