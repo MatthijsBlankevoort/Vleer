@@ -57,4 +57,9 @@ public class WallOutlines : MonoBehaviour {
             yield return null;
         }
     }
+
+    public void QuickyDirtySplashScreenBodge()
+    {
+        StartCoroutine(FadeIn());
+    }
 }
