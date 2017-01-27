@@ -22,6 +22,7 @@ public class PlayerController : MonoBehaviour {
         mySpriteRenderer = this.GetComponent<SpriteRenderer>();
         pause = GameObject.FindGameObjectWithTag("GameController").GetComponent<PauseScript>();
         rigidBody = this.gameObject.GetComponent<Rigidbody2D>();
+        Color = (PlayerColor)Random.Range(1, 5);
 	}
 	void Update()
     {

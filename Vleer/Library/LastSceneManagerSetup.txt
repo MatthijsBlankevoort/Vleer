@@ -1,8 +1,4 @@
 sceneSetups:
-<<<<<<< HEAD
-- path: Assets/_Scenes/Menus/Game Over.unity
-=======
-- path: Assets/_Scenes/Level 3.unity
->>>>>>> aap
+- path: Assets/_Scenes/Menus/Main Menu.unity
   isLoaded: 1
   isActive: 1
