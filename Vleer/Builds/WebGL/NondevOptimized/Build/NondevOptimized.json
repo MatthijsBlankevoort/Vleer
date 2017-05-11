@@ -1,0 +1,9 @@
+{
+"TOTAL_MEMORY": 536870912,
+"dataUrl": "NondevOptimized.data.unityweb",
+"asmCodeUrl": "NondevOptimized.asm.code.unityweb",
+"asmMemoryUrl": "NondevOptimized.asm.memory.unityweb",
+"asmFrameworkUrl": "NondevOptimized.asm.framework.unityweb",
+"splashScreenStyle": "Light",
+"backgroundColor": "#FFFFFF"
+}

@@ -265,8 +265,8 @@ InputManager:
     m_Name: Fire Large Sonar
     descriptiveName: For firing the Large Sonar powerup
     descriptiveNegativeName: 
-    negativeButton: 
-    positiveButton: space
+    negativeButton: s
+    positiveButton: s
     altNegativeButton: 
     altPositiveButton: 
     gravity: 1000

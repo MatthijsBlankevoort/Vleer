@@ -48,7 +48,7 @@ public class PlayerSonar : MonoBehaviour {
 
         if (Time.time % everyThisManySeconds == 0)
             Charge(rechargeAmount);
-        if (Input.GetAxis("Fire Large Sonar") > 0.1f && charge >= fullCharge)
+        if (Input.GetAxis("Fire Large Sonar") > 0.1f || Input.GetKeyDown(KeyCode.S) && charge >= fullCharge)
         {
             charge = 0;
             FireLargeSonar();

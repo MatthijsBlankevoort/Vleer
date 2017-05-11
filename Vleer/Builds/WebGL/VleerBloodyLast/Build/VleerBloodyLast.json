@@ -1,0 +1,9 @@
+{
+"TOTAL_MEMORY": 134217728,
+"dataUrl": "VleerBloodyLast.data.unityweb",
+"asmCodeUrl": "VleerBloodyLast.asm.code.unityweb",
+"asmMemoryUrl": "VleerBloodyLast.asm.memory.unityweb",
+"asmFrameworkUrl": "VleerBloodyLast.asm.framework.unityweb",
+"splashScreenStyle": "Light",
+"backgroundColor": "#FFFFFF"
+}

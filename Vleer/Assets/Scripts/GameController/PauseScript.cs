@@ -8,8 +8,14 @@ public class PauseScript : MonoBehaviour {
     private PlayerController playerController;
 
     void Start()
-    {
-        playerController = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
+    {  
+        try
+        {
+            playerController = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
+        } catch (UnityException)
+        {
+
+        }
     }
 
 	// Update is called once per frame

@@ -9,6 +9,7 @@ public class WallOutlines : MonoBehaviour {
     public float fadeInSeconds;
     public float fadeOutSeconds;
     public float delayForFadeOut;
+    private bool fadedIn;
 
     // Use this for initialization
     void Start () {
@@ -20,7 +21,7 @@ public class WallOutlines : MonoBehaviour {
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        print("a");
+        //print("a");
         if (other.gameObject.tag == "PlayerSonar" || other.gameObject.tag == "Sonar" || other.gameObject.tag == "BigSonar")
         {
             if(fadeOutCoroutine != null)
@@ -29,8 +30,19 @@ public class WallOutlines : MonoBehaviour {
         }
     }
 
+    private void Update()
+    {
+        if(fadedIn == false)
+            gameObject.GetComponent<Renderer>().material.color = new Color(
+                    gameObject.GetComponent<Renderer>().material.color.r,
+                    gameObject.GetComponent<Renderer>().material.color.g,
+                    gameObject.GetComponent<Renderer>().material.color.b,
+                    0);
+    }
+
     IEnumerator FadeIn()
     {
+        fadedIn = true;
         while (gameObject.GetComponent<Renderer>().material.color.a < 1)
         {
             gameObject.GetComponent<Renderer>().material.color = new Color(
@@ -57,6 +69,8 @@ public class WallOutlines : MonoBehaviour {
                 gameObject.GetComponent<Renderer>().material.color.a - (Time.deltaTime / fadeOutSeconds));
             yield return null;
         }
+
+        fadedIn = false;
     }
 
     public void QuickyDirtySplashScreenBodge()

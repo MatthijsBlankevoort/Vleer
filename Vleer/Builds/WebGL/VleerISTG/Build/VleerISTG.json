@@ -1,0 +1,9 @@
+{
+"TOTAL_MEMORY": 134217728,
+"dataUrl": "VleerISTG.data.unityweb",
+"asmCodeUrl": "VleerISTG.asm.code.unityweb",
+"asmMemoryUrl": "VleerISTG.asm.memory.unityweb",
+"asmFrameworkUrl": "VleerISTG.asm.framework.unityweb",
+"splashScreenStyle": "Light",
+"backgroundColor": "#FFFFFF"
+}

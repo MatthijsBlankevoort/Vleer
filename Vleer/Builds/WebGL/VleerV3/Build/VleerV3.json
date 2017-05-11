@@ -1,0 +1,9 @@
+{
+"TOTAL_MEMORY": 134217728,
+"dataUrl": "VleerV3.data.unityweb",
+"asmCodeUrl": "VleerV3.asm.code.unityweb",
+"asmMemoryUrl": "VleerV3.asm.memory.unityweb",
+"asmFrameworkUrl": "VleerV3.asm.framework.unityweb",
+"splashScreenStyle": "Light",
+"backgroundColor": "#FFFFFF"
+}
